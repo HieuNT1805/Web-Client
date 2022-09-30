@@ -1,0 +1,38 @@
+.bordlength {
+    margin :auto;
+    width : 95vw;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px 
+};
+
+.picz{
+    display: none;
+    float:left;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.test-p {
+    opacity: 0;
+    animation: fade 3s ease-in forwards .1s;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    -webkit-animation: fade 3s ease-in forwards .1s;
+    -moz-animation: fade 3s ease-in forwards .1s;
+    -o-animation: fade 3s ease-in forwards .1s;
+    -ms-animation: fade 3s ease-in forwards .1s;
+    
+}
+
+@keyframes fade {
+    0%{transform: translateZ(50%);
+        opacity: 0;
+        text-align: center;
+    }
+    100%{
+        opacity: 1;
+        
+        text-align: center;
+    }
+}
