@@ -20,7 +20,8 @@ function Navbar() {
                         <Link to="/menu">Menu</Link>
                         <Link to="/about">About</Link>
                         <Link to="/contact">Contact</Link>
-                        <Link to="/login">Log in</Link>
+                        <Link to="/register">Log in</Link>
+                        <Link to="/login" >Log in</Link>
                 </div>
         </div>
         <div className="rightside">
@@ -28,7 +29,8 @@ function Navbar() {
                         <Link to="/menu">Menu</Link>
                         <Link to="/about">About</Link>
                         <Link to="/contact">Contact</Link>
-                        <Link to="/login">Log in</Link>
+                        <Link to="/register">Log in</Link>
+                        
                         <button onClick={toggleNavbar}>
                             <TocIcon/>
                         </button>
