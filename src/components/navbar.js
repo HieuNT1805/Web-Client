@@ -30,7 +30,7 @@ function Navbar() {
                         <Link to="/about">About</Link>
                         <Link to="/contact">Contact</Link>
                         <Link to="/register">Log in</Link>
-                        
+                        <Link to="/login">Log in</Link>
                         <button onClick={toggleNavbar}>
                             <TocIcon/>
                         </button>
