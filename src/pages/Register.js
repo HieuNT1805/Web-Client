@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeBackground from "../img/background1.avif";
 import "../style/register.css";
+import {Link} from 'react-router-dom';
 
 function Register() {
   return (
@@ -21,8 +22,8 @@ function Register() {
 
                     <button type="submit" className="btn btn-primary">Sign in</button>
               
-                    <p className="forgot-password"> Already registered <a href="/login">Log in?</a></p>
-              
+                    <p className="forgot-password"> <Link to="/login" > Already registered  </Link>  </p>
+
           </form>
           </div>
           

@@ -9,7 +9,6 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import {Route, Switch} from "react-router-dom";
 
-
 function App() {
   return (
      <>

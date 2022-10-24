@@ -1,6 +1,10 @@
 import React from 'react';
 import HomeBackground from "../img/background1.avif";
 import "../style/login.css"
+// import { Redirect } from 'react-router-dom';
+
+
+import {Link} from 'react-router-dom';
 
 function Login() {
   return (
@@ -17,7 +21,7 @@ function Login() {
                     <input name="pwd"  type="password"></input>
 
                     <button type="submit-btn" className="btn btn-primary">Log in</button>
-                    <p className="forgot-password"> or <a href="/register"> Register Account</a></p>
+                    <p className="forgot-password"> or <Link to="/register"> Not have an account ? Sign up here  </Link> </p>
             </form>
     </div>
   )
