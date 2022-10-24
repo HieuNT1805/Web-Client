@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Navbar from "./components/navbar";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import {Route, Redirect, Switch} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 
 
 function App() {
