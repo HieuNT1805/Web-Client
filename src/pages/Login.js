@@ -4,21 +4,20 @@ import "../style/login.css"
 
 function Login() {
   return (
+    //body login
     <div className="login" style={{backgroundImage: `url(${HomeBackground})`}}>
-            <form className="form-login">
-                    <h1 className="title-login"><b>Log in</b>  </h1>
+            
+            <form className="form-login-mau-trang"> 
+                    <h1 className="tieu-de-login"><b>Log in</b>  </h1>
 
-                    <label className="email-label" htmlFor="email">Email</label>
-                    <input type="email" className="input-email" />
+                    <label htmlFor="name">User Name</label>
+                    <input name="name"  type="text"></input>
+                    
+                    <label htmlFor="pwd">Password</label>
+                    <input name="pwd"  type="password"></input>
 
-                    <label className="login-label" htmlFor="password" >Password </label>
-                    <input type="password" className="input-password"  />
-
-
-
-                    <button type="submit" className="btn btn-primary">Log in</button>
-                    <p className="forgot-password text-right"> or <a href="/register"> Register Account</a>
-        </p>
+                    <button type="submit-btn" className="btn btn-primary">Log in</button>
+                    <p className="forgot-password"> or <a href="/register"> Register Account</a></p>
             </form>
     </div>
   )
