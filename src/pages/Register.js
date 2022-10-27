@@ -1,14 +1,14 @@
 import React, {useState} from 'react'
 import HomeBackground from "../img/background1.avif";
 import "../style/register.css";
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import authService from '../service/user.service';
 
 
 function Register() {
+  let history=useHistory();
   const [message, setMessage] = useState("");
-  
   const { register, handleSubmit, formState: { errors } } = useForm({mode: 'onBlur'});
   const onSubmit = data => {
       const firstname=data.firstname;
@@ -18,7 +18,9 @@ function Register() {
       const password=data.password;
       authService.register(firstname, lastname, email, username, password).then(
         () => {
-          window.open("/login")
+          // window.open("/login")
+          window.alert("Register Successed!")
+          history.push("/login")
         }, (error) => {
           const resMessage =
                     (error.response &&
