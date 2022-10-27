@@ -19,7 +19,7 @@
     margin-right: auto;
     border-radius: 30px;
     width: 30%;
-    height: auto;
+    height: 85%;
     
 }
 .form-register h1{
@@ -52,8 +52,8 @@
 
 form button{
     margin-top: 40px;
-    width: 150px;
-    height: 40px;
+    width: 130px;
+    height: 50px;
     border: none;
     border-radius: 20px;
     background-color: #121619;
@@ -67,4 +67,10 @@ form button{
 .forgot-password{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px
+}
+/* register warning text */
+.notion-text{
+    color: rgb(190, 37, 40, 1);
+    margin-left: 15px;
 }
