@@ -118,11 +118,11 @@ function Register() {
                       {...register("password", {
                         minLength: {
                             value: 8,
-                            message: "Password must be between 5 character and 20 character"
+                            message: "Password must be between 8 character and 20 character"
                         },
                         maxLength: {
                             value: 20,
-                            message: "Password must be between 5 character and 20 character "
+                            message: "Password must be between 8 character and 20 character "
                         },
                         required: "Password is required"
                       } )}>

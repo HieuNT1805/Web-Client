@@ -3,10 +3,11 @@ import HomeBackground from "../img/background1.avif";
 import "../style/login.css"
 // import { Redirect } from 'react-router-dom';
 import authService from '../service/user.service';
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 function Login() {
+  let history=useHistory();
   const [message, setMessage] = useState("");
   const { register, handleSubmit, formState: { errors } } = useForm({mode: 'onBlur'});
   const onSubmit = data => {
@@ -14,7 +15,10 @@ function Login() {
     const password=data.password;
     authService.login(username, password).then(
       () => {
-        window.open("/menu")
+
+        // window.open("/menu")
+        window.alert("Login Successed!");
+        history.push("/menu")
       }, (error) => {
         const resMessage =
                   (error.response &&
@@ -59,11 +63,11 @@ function Login() {
                     {...register("password", {
                       minLength: {
                           value: 8,
-                          message: "Password must be between 5 character and 20 character"
+                          message: "Password must be between 8 character and 20 character"
                       },
                       maxLength: {
                           value: 20,
-                          message: "Password must be between 5 character and 20 character "
+                          message: "Password must be between 8 character and 20 character "
                       },
                       required: "Password is required"
                     } )}
@@ -71,7 +75,7 @@ function Login() {
                     {errors.password && (<small className="notion-text"> {errors.password.message}</small>)}
                     {/* error log in failed */}
                     {message && (
-                      <div >
+                      <div className="error-login">
                           <div role="alert"
                           >
                           {message}
