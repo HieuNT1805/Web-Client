@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 10;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 50px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: 50px;
+  }
+  form textarea {
+    margin-top: 15px;
+    height: 70px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #121619;
+    color: black;
+  }
+  input::placeholder,
+  textarea::placeholder {
+      font-weight: bold;
+      color: gray;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  /* form input:focus,
+  textarea:focus {
+      outline: none;
+  } */
+    
+  form label {
+      margin-top: 15px;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif
+  }
+    
+  form button {
+      margin-top: 40px;
+      width: 150px;
+      height: 40px;
+      border: none;
+      border-radius: 20px;
+      background-color: #121619;
+      color: whitesmoke;
+      font-size: 15px;
+      font-family: 'Courier New', Courier, monospace ;
+      cursor: pointer;
+      margin-left: 300px;
+  }
