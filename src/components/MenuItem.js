@@ -2,10 +2,12 @@ import Pearl from "../img/jewellery1.jpg"
 import PearlGold from "../img/jewellery2.jpg"
 import Flower from "../img/jewellery3.jpg"
 import ButterFly from "../img/jewellery4.jpg"
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@mui/material';
 import { AddShoppingCart } from "@mui/icons-material"
 import "../style/MenuItem.css"
+import getProductLists from "../service/product.service"
+import axios from "axios"
 
 // const menuItem =[
 //     {
@@ -35,7 +37,10 @@ import "../style/MenuItem.css"
 //         category: 'Rings',
 //         price: 15.99,
 //         img: ButterFly
-const menuItem = ({product, onAddToCart}) => {
+const MenuItem = ({product, onAddToCart}) => {
+       
+
+
     const handleAddToCart = () => onAddToCart(product.id, 1);
     return (
         <Card className="card">
@@ -44,7 +49,7 @@ const menuItem = ({product, onAddToCart}) => {
                 <div className="card-content">
                     <Typography gutterBottom variant="h7" component="h8">{product.name}</Typography>
                     <Typography gutterBottom variant="h7" component="h8">{product.price}</Typography>
-                    <Typography gutterBottom variant="h7" component="h8">{product.category}</Typography>
+                    {/* <Typography gutterBottom variant="h7" component="h8">{product.category}</Typography> */}
                 </div>
             </CardContent>
             <CardActions disableSpacing className="card-action">
@@ -56,4 +61,4 @@ const menuItem = ({product, onAddToCart}) => {
 
     )
 }
-export default menuItem
+export default MenuItem

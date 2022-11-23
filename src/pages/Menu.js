@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import MenuList from '../components/MenuList'
 import items from "../components/MenuItem"
 import Categories from '../components/Categories'
 import "../style/Menu.css"
 import { Grid } from '@mui/material'
 import Product from '../components/MenuItem'
+import getProductLists from '../service/product.service'
+
 
 // const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 const products = [
@@ -13,24 +15,19 @@ const products = [
 ]
 function Menu() {
 
-    // const [menuItems, setMenuItems] = useState(items);
-    // const [activeCategory, setActiveCategory] = useState("");
-    // const [categories, setCategories] = useState(allCategories);
-    // const filterItems = (category) => {
-    //     setActiveCategory(category);
-    //     if (category === "all") {
-    //       setMenuItems(items);
-    //       return;
-    //     }
-    //     const newItems = items.filter((item) => item.category === category);
-    //     setMenuItems(newItems);
-    //   };
+  const [data, setData] = useState({products:[]});
     
+  useEffect(()=>{
+    getProductLists()
+    .then((response)=>{
+        setData(response.data)
+    })
+  },[])
   return (
     <main className="content">
       <div className="toolbar"/>
       <Grid container justify="center" spacing={4}>
-        {products && products.map((product) => (
+        {data.products && data.products.map((product) => (
           <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
             <Product product={product}  />
           </Grid>
