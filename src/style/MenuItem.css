@@ -1,0 +1,18 @@
+.card{
+    max-width: 100%;
+    margin-bottom: 70%;
+    margin-top: 30%;
+    margin-left: 20%;
+}
+.card-media{
+    height: 0;
+    padding-top: 56.25%;
+}
+.card-action{
+    display: flex;
+    justify-content: flex-end;
+}
+.card-content{
+    display: flex;
+    justify-content: space-between;
+}
